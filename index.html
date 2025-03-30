@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+        <div id="header">
+        <div class="container">
+            <nav>
+                <h1><span>B</span>ella  <span>W</span>andere</h1>
+                <ul>
+                    <li><a href="#">Home </a></li>
+                    <li> <a href="#about">About</a>
+                    <li><a href="#services">Services</a></li>   
+                    <li><a href="#contact">Contact</a></li>  
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Hi I am <br>Bella Wandere</p><br/>
+                <h3>website Developer</h3>
+            </div>   
+        </div>
+        <!-------About--------->
+        <div id="about">
+            <div class="work">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="/Myportfolio/Images/1715713484218.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="about-title">About Me</h1>
+                        <p>Hello, I am Bella Wandere from Eldoret,Kenya.<br>A website developer taking a Bachelor course in ICTM at Maseno University <br> 
+                            I also offer networking services <br> that I learned and earned a certificate at Cisco Academy.
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick ="opentab('skills')">Skills</p> 
+                            <p class="tab-links" onclick ="opentab('expeience')">Experience</p>
+                            <p class="tab-links" onclick ="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>website</span> <br>Development</li>
+                                <li><span>Software</span><br>Development</li>
+                                <li><span>Computer</span><br> Networking</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="expeience">
+                            <ul>
+                                <li><span>2024-current</span> <br> ICT student at Maseno University</li>
+                                <li><span>2022-2023</span><br>Cisco Certificate in Networking</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2024</span> <br>ICT student at Maseno University</li>
+                                <li><span>2022-2023</span><br>Networking at Cisco Academy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-------services------------------>
+            <div id="services">
+                <div class="container">
+                    <h1 class="about-title">My Services</h1>
+                    <div class="services-list">
+                        <div>
+                            <i class='bx bx-code-block'></i>
+                           <h2>Web design</h2> 
+                           <p>Diverse web projects are offered with high quality visuals tailored to meet business goals and enhance user experience </p>
+                           <a href="#">Learn more</a>
+                        </div>
+                        <div>
+                            <i class='bx bx-code-alt' ></i>
+                            <h2>UI/UX design</h2> 
+                            <p>Diverse web projects are offered with high quality visuals tailored to meet business goals and enhance user experience </p>
+                            <a href="#">Learn more</a>
+                         </div>
+                         <div>
+                            <i class='bx bxl-graphql' ></i>
+                            <h2>Software Installation</h2> 
+                            <p>Diverse web projects are offered with high quality visuals tailored to meet business goals and enhance user experience </p>
+                            <a href="#">Learn more</a>
+                         </div>
+
+                    </div>
+                </div>
+            </div>
+            <!---------------Contact------------------->
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class="sub-title">Contact Me</h1>
+                            <p> <i class='bx bx-send' ></i>lofykings@gmail.com</p>
+                            <p> <i class='bx bx-phone' ></i>0720069238</p>
+                            <div class="social-icons">
+                                <a href=""><i class='bx bxl-facebook-circle' ></i></a>
+                                <a href=""><i class='bx bxl-whatsapp' ></i></a>
+                                <a href=""><i class='bx bxl-instagram' ></i></a>
+                            </div>
+                        <br/><br/><a href="" class="btn">Download CV</a>
+                        </div> 
+                        <div class="contact-right">
+                            <form>
+                                <input type="text" name="Name" placeholder="Your name" required>
+                                <input type="email" name="Email" placeholder="Your Email" required>
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <script>
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+
+                function opentab(tabname){
+                    for(tablink of tablinks){
+                        tablink.classList.remove("active-link");
+                    }
+                    for(tabcontent of tabcontents){
+                        tabcontent.classList.remove("active-tab");
+                    }
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+
+
+            </script>
+        </body>
+</html>
