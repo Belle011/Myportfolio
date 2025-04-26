@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My portfolio website</title>
-    <link rel="stylesheet" href="css/style.css">
+    <base href="/Myportfolio/">
+    <link rel="stylesheet" href="./css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -21,7 +22,7 @@
             </nav>
             <div class="header-text">
                 <p>Hi I am <br>Bella Wandere</p><br/>
-                <h3>website Developer</h3>
+                <h3>Full Stack Website Developer</h3>
             </div>   
         </div>
         <!-------About--------->
@@ -29,7 +30,7 @@
             <div class="work">
                 <div class="row">
                     <div class="about-col-1">
-                        <img src="/Myportfolio/Images/1715713484218.jpg">
+                        <img src="./Images/1715713484218.jpg">
                     </div>
                     <div class="about-col-2">
                         <h1 class="about-title">About Me</h1>
@@ -71,19 +72,19 @@
                         <div>
                             <i class='bx bx-code-block'></i>
                            <h2>Web design</h2> 
-                           <p>Diverse web projects are offered with high quality visuals tailored to meet business goals and enhance user experience </p>
+                           <p>I create modern, responsive, and user-friendly websites tailored to client goals. Each project is crafted with clean code, appealing visuals, and intuitive layouts to ensure seamless user interaction and performance across all devices.</p>
                            <a href="#">Learn more</a>
                         </div>
                         <div>
                             <i class='bx bx-code-alt' ></i>
                             <h2>UI/UX design</h2> 
-                            <p>Diverse web projects are offered with high quality visuals tailored to meet business goals and enhance user experience </p>
+                            <p>I specialize in designing engaging user interfaces and experiences that prioritize usability, accessibility, and aesthetic appeal. Through thoughtful wireframes and prototypes, I ensure the final product delivers both form and function effectively.</p>
                             <a href="#">Learn more</a>
                          </div>
                          <div>
                             <i class='bx bxl-graphql' ></i>
                             <h2>Software Installation</h2> 
-                            <p>Diverse web projects are offered with high quality visuals tailored to meet business goals and enhance user experience </p>
+                            <p>I offer professional software installation and setup services, ensuring compatibility, configuration, and updates are handled efficiently. I help clients deploy the right tools for their needs, whether on personal systems or enterprise networks.</p>
                             <a href="#">Learn more</a>
                          </div>
 
@@ -96,23 +97,61 @@
                     <div class="row">
                         <div class="contact-left">
                             <h1 class="sub-title">Contact Me</h1>
-                            <p> <i class='bx bx-send' ></i>lofykings@gmail.com</p>
-                            <p> <i class='bx bx-phone' ></i>0720069238</p>
-                            <div class="social-icons">
-                                <a href=""><i class='bx bxl-facebook-circle' ></i></a>
-                                <a href=""><i class='bx bxl-whatsapp' ></i></a>
-                                <a href=""><i class='bx bxl-instagram' ></i></a>
+            
+                            <!-- Email opens Gmail -->
+                            <p><i class='bx bx-send'></i> 
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rosebellawandere@gmail.com" target="_blank" style="color: #fff; text-decoration: none;">
+                                    rosebellawandere@gmail.com
+                                </a>
+                            </p>
+            
+                            <p><i class='bx bx-phone'></i> 0720069238</p>
+            
+                            <!--<div class="social-icons">
+                                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                                <a href="https://whatsapp.com/."><i class='bx bxl-whatsapp'></i></a>
+                                <a href="#"><i class='bx bxl-instagram'></i></a>
                             </div>
-                        <br/><br/><a href="" class="btn">Download CV</a>
-                        </div> 
+                        -->
+                            <br/><br/>
+                            <a href="./C.V.pdf" download class="btn">Download CV</a>
+                            <!-- Update "path/to/your-cv.pdf" with the actual path to your CV file -->
+                        </div>
+            
                         <div class="contact-right">
-                            <form>
-                                <input type="text" name="Name" placeholder="Your name" required>
+                            <form id="contact-form">
+                                <input type="text" name="Name" placeholder="Your Name" required>
                                 <input type="email" name="Email" placeholder="Your Email" required>
                                 <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                                 <button type="submit">Submit</button>
+                                <p id="form-message" style="display:none; color: whitesmoke; margin-top: 10px;">Message Sent!</p>
                             </form>
-                        </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add this script to handle form submission -->
+            <script>
+                document.getElementById("contact-form").addEventListener("submit", function(event){
+                    event.preventDefault(); // Prevent real form submission for now
+                
+                    // Show the success message
+                    const message = document.getElementById("form-message");
+                    message.style.display = "block";
+                
+                    // Clear the form fields (optional, looks nice)
+                    this.reset();
+                
+                    // Hide the message after 3 seconds
+                    setTimeout(function(){
+                        message.style.display = "none";
+                    }, 3000); // 3000 milliseconds = 3 seconds
+                });
+                </script>
+                
+            
+            
                     </div>
                 </div>
             </div>
