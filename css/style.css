@@ -151,6 +151,7 @@ nav ul li a:hover::after
 }
 .about-title:hover{
     color: #eb1736;
+    
 }
 .tab-titles
 {
@@ -171,6 +172,7 @@ nav ul li a:hover::after
     width: 0;
     height: 3px;
     background: #ff004f;
+    color: #080808;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -229,7 +231,7 @@ nav ul li a:hover::after
     display: inline-block;
 }
 .services-list div:hover{
-    background: #ff004f;
+    background: whitesmoke;
     transform: translateY(-10px);
 }
 /*----------------Contact-------------*/
@@ -302,9 +304,79 @@ form button{
     padding: 10px;
 }
 /*--------------Css for small screen-----------*/
-@media only screen and (max-width: 600px){
     
-}
-html {
-    scroll-behavior: smooth;
-}
+    @media only screen and (max-width: 600px) {
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        nav ul {
+            width: 100%;
+            background: #080808;
+            display: none;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+    
+        nav ul.active {
+            display: flex;
+        }
+    
+        nav ul li {
+            width: 100%;
+            margin: 10px 0;
+        }
+    
+        nav ul li a {
+            font-size: 20px;
+        }
+    
+        .header-text {
+            margin-top: 30%;
+            font-size: 24px;
+        }
+    
+        .header-text p {
+            font-size: 24px;
+        }
+    
+        .header-text h3 {
+            font-size: 32px;
+        }
+    
+        .row {
+            flex-direction: column;
+        }
+    
+        .about-col-1, .about-col-2 {
+            flex-basis: 100%;
+        }
+    
+        .about-col-1 img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    
+        .tab-titles {
+            flex-direction: column;
+        }
+    
+        .tab-links {
+            margin: 10px 0;
+        }
+    
+        .services-list {
+            grid-template-columns: 1fr;
+        }
+    
+        .contact-left, .contact-right {
+            flex-basis: 100%;
+        }
+    
+        .contact-right form {
+            width: 100%;
+        }
+    }
+    
