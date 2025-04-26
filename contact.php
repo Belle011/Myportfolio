@@ -1,5 +1,5 @@
 <?php
-include 'db_connect.php';
+include './db_connect.php';
 
 // Initialize variables for form feedback
 $message_sent = false;
@@ -56,4 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 </body>
+</html>
+
 </html>
